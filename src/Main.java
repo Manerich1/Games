@@ -40,7 +40,7 @@ public class Main {
         // Informa se o Número é Positivo ou Negativo
         if (num4 > 0) {
             System.out.println("O Número " + num4 + " é positivo");
-        } else if (num4 > 0) {
+        } else if (num4 < 0) {
             System.out.println("O Número " + num4 + " é negativo");
         } else {
             System.out.println("O Número é zero :|");
