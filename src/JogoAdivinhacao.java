@@ -10,8 +10,8 @@ public class JogoAdivinhacao {
 
         while(jogarNovamente) {
             int numMin = 1;
-            int numMax = 100;
-            int tentmax = 10;
+            int numMax;
+            int tentmax;
             int dificul;
             int tent = 0;
             boolean acer = false;
