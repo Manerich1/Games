@@ -57,12 +57,12 @@ public class JogoDeQuiz {
 
             System.out.println("\nPergunta " + (i + 1 + PERGUNTAS_ME.length) + ":");
             System.out.println(PERGUNTAS_VF[indp]);
-            System.out.println("Sua resposta (Verdadeiro [V] ou Falso [F]): ");
+            System.out.println("\nSua resposta (Verdadeiro [V] ou Falso [F]): ");
             String resp = sc.nextLine().toUpperCase();
 
             boolean respB = resp.equals("V") ? true : resp.equals("F") ? false : false;
 
-            if (respB == RESPOSTAS_VF[indp - PERGUNTAS_ME.length]) {
+            if (respB == RESPOSTAS_VF[indp]) {
                 System.out.println("Resposta correta! Você ganhou 10 pontos");
                 pont += 10;
             } else {
