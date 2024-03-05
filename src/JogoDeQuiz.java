@@ -66,7 +66,7 @@ public class JogoDeQuiz {
                 System.out.println("Resposta correta! Você ganhou 10 pontos");
                 pont += 10;
             } else {
-                System.out.println("Resposta incorreta. A resposta certa é: " + (RESPOSTAS_VF[indp - PERGUNTAS_ME.length] ? "Verdadeiro" : "Falso"));
+                System.out.println("Resposta incorreta. A resposta certa é: " + (RESPOSTAS_VF[indp] ? "Verdadeiro" : "Falso"));
             }
         }
 
