@@ -60,7 +60,8 @@ public class JogoDeQuiz {
             System.out.println("\nSua resposta (Verdadeiro [V] ou Falso [F]): ");
             String resp = sc.nextLine().toUpperCase();
 
-            boolean respB = resp.equals("V") ? true : resp.equals("F") ? false : false;
+            boolean respB;
+            respB = resp.equals("V") ? true : resp.equals("F") ? false : false;
 
             if (respB == RESPOSTAS_VF[indp]) {
                 System.out.println("Resposta correta! Você ganhou 10 pontos");
