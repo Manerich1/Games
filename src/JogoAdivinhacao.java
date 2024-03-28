@@ -9,7 +9,7 @@ public class JogoAdivinhacao {
         boolean jogarNovamente = true;
 
         while(jogarNovamente) {
-            int numMin = 1;
+            final int numMin = 1;
             int numMax;
             int tentmax;
             int dificul;
