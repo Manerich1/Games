@@ -1,4 +1,4 @@
-Alguns jogos simples programados em Java como:
+<h1>Alguns jogos simples programados em Java como:</h1>
 
   Jogo de Adivinhação
 Onde você precisa descobrir um número que é gerado aleatoriamente
