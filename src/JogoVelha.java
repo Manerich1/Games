@@ -14,17 +14,21 @@ public class JogoVelha {
             Arrays.fill(espacos, ' ');
         }
 
+        System.out.println("# # # Jogo da velha # # #\n");
         while (!jogoAcabou) {
 
             // Exibe o tabuleiro totalmente vazio com as cordenadas das linhas e colunas
-            System.out.println("  1 2 3"); // cordenadas das colunas
+            System.out.println("         Coluna");
+            System.out.println("          1 2 3 "); // cordenadas das colunas
+            System.out.println("          # # #");
             for (int i = 0; i < 3; i++) {
-                System.out.print((i + 1) + " "); // cordenadas das linhas
+                System.out.print("Linha " + (i + 1) + " # "); // cordenadas das linhas
                 for (int j = 0; j < 3; j++) {
                     System.out.print(tabuleiro[i][j] + " ");
                 }
                 System.out.println();
             }
+            System.out.println();
 
             // Pede pro jogador fazer uma jogada e registra em qual posição ela fica
             System.out.println("Jogador " + jogadorAtual + ", faça sua jogada (linha coluna): ");
