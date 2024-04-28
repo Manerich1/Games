@@ -2,21 +2,26 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class JogoDeQuiz {
+    // Cria um array para as perguntas de múltipla escolha
     private static final String[] PERGUNTAS_ME = {
             "Qual é a capital do Brasil?\n(A) Rio de Janeiro\n(B) São Paulo\n(C) Brasília\n",
             "Qual é a cor do céu em um dia ensolarado?\n(A) Amarelo\n(B) Azul\n(C) Vermelho\n",
             "Quem escreveu 'Dom Quixote'?\n(A) Machado de Assis\n(B) Wiliam Shakespear\n(C) Miguel de Cervantes\n",
             "Qual é o maior planeta do nosso sistema solar?\n(A) Júpiter\n(B) Terra\n(C) Marte\n"
     };
+    // Cria um array com as respostas das perguntas de múltipla escolha
     private static final String[] RESPOSTAS_ME = {"C", "B", "C", "A"};
 
+    // Cria um array com as perguntas de verdadeiro ou falso
     private static final String[] PERGUNTAS_VF = {
             "Brasília é a capital do Brasil. (Verdadeiro ou Falso)",
             "O Sol é uma estrela. (Verdadeiro ou Falso)",
             "O alfabeto tem 27 letras. (Verdadeiro ou Falso)",
             "A Terra é plana. (Verdadeiro ou Falso)"
     };
+    // Cria um array com as respostas das perguntas de verdadeiro ou falso
     private static final boolean[] RESPOSTAS_VF = {true, true, false, false};
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Random rd = new Random();
@@ -36,7 +41,7 @@ public class JogoDeQuiz {
             pergf[indp] = true;
 
             System.out.println("\nPergunta " + (i + 1) + ": " + PERGUNTAS_ME[indp]);
-            System.out.println("Sua resposta: ");
+            System.out.print("Sua resposta: ");
             String resp = sc.nextLine().toUpperCase();
 
             if (resp.equals(RESPOSTAS_ME[indp])) {
