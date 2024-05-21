@@ -11,5 +11,10 @@
    * 4 perguntas de verdadeiro e falso
    * 4 perguntas de múltipla escolha
 
+## Jogo de Matemática
+* Pode ser feito cálculos de adição, subtração, multiplicação e divisão
+* Também tem a opção de cálculos maiores onde tem até 3 números
+* Ao final mostra quantos cálculos você acertou
+
 ## Jogo da Velha
 É um jogo da velha onde você pode jogar contra outra pessoa
