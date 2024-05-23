@@ -6,7 +6,8 @@ public class JogoAdivinhacao {
     static Random rd = new Random();
 
     static int numMax;
-    static int tentmax;
+    static int tentMax;
+    static int score;
 
     public static void main(String[] args) {
         boolean jogarNovamente = true;
@@ -22,7 +23,7 @@ public class JogoAdivinhacao {
             choseDificult();
             int numS = rd.nextInt(numMax) + numMin;
 
-            while (!win && tent <= tentmax) {
+            while (!win && tent <= tentMax) {
                 if (tent == 5 && !dica) {
                     dica = true;
                     if (numS % 2 == 0) {
@@ -32,7 +33,7 @@ public class JogoAdivinhacao {
                     }
                 }
 
-                System.out.print("Tentativa " + tent + " de " + tentmax + ". Digite um Número: ");
+                System.out.print("Tentativa " + tent + " de " + tentMax + ". Digite um Número: ");
                 int palp = ler.nextInt();
                 tent++;
 
@@ -46,9 +47,14 @@ public class JogoAdivinhacao {
             }
 
             if (win) {
-                System.out.println("##################################\nParabéns! Você acertou o Número Secreto " + numS + " com " + tent + " tentativas");
+                score += (tent - 10/numMax) * 10;
+                System.out.println("##################################");
+                System.out.println("Parabéns! Você acertou o Número Secreto " + numS + " com " + tent + " tentativas");
+                System.out.println("Pontuação: " + score);
             } else {
-                System.out.println("##################################\nVocê exedeu o número de tentativas. O Número Secreto era " + numS);
+                System.out.println("##################################");
+                System.out.println("Você exedeu o número de tentativas. O Número Secreto era " + numS);
+                System.out.println("Pontuação: " + score);
             }
 
             System.out.print("Deseja Jogar Novamente? (S/N): ");
@@ -56,6 +62,7 @@ public class JogoAdivinhacao {
             jogarNovamente = (resp == 's' || resp == 'S');
 
         }
+        System.out.println("\nPontuação final: " + score);
         System.out.println("\nObrigado por Jogar!");
         ler.close();
     }
@@ -74,15 +81,15 @@ public class JogoAdivinhacao {
             switch (dificul) {
                 case 1:
                     numMax = 50;
-                    tentmax = 10;
+                    tentMax = 10;
                     break;
                 case 2:
                     numMax = 100;
-                    tentmax = 7;
+                    tentMax = 7;
                     break;
                 case 3:
                     numMax = 100;
-                    tentmax = 5;
+                    tentMax = 5;
                     break;
                 default:
                     System.out.println("Opção inválida. Escolha novamente");
