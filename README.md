@@ -5,6 +5,7 @@
   * Existem 3 níveis de dificuldade
   * Tem limite de tentativas
   * Após um número de tentativas é recebido uma dica
+  * Tem sistema de pontuação
 
 ## Jogo do Quiz
 * Você receberá diversas perguntas e terá que responder
