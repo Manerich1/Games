@@ -5,9 +5,9 @@ public class JogoAdivinhacao {
     static Scanner ler = new Scanner(System.in);
     static Random rd = new Random();
 
+    static int[] score = {0, 0, 0};
     static int numMax;
     static int tentMax;
-    static int score;
 
     public static void main(String[] args) {
         boolean jogarNovamente = true;
@@ -35,7 +35,6 @@ public class JogoAdivinhacao {
 
                 System.out.print("Tentativa " + tent + " de " + tentMax + ". Digite um Número: ");
                 int palp = ler.nextInt();
-                tent++;
 
                 if (palp == numS) {
                     win = true;
@@ -44,25 +43,27 @@ public class JogoAdivinhacao {
                 } else {
                     System.out.println("O Número Secreto é menor");
                 }
+                tent++;
             }
 
             if (win) {
-                score += (tent - 10/numMax) * 10;
+                score[0] += (numMax - tent + 1) * 10;
+                score[1]++;
                 System.out.println("##################################");
-                System.out.println("Parabéns! Você acertou o Número Secreto " + numS + " com " + tent + " tentativas");
-                System.out.println("Pontuação: " + score);
+                System.out.println("Parabéns! Você acertou o Número Secreto " + numS + " com " + (tent - 1) + " tentativas");
             } else {
+                score[2]++;
                 System.out.println("##################################");
                 System.out.println("Você exedeu o número de tentativas. O Número Secreto era " + numS);
-                System.out.println("Pontuação: " + score);
             }
+            System.out.println("Pontuação: " + score[0] + " vitórias: " + score[1] + " derrotas: " + score[2]);
 
             System.out.print("Deseja Jogar Novamente? (S/N): ");
             char resp = ler.next().charAt(0);
             jogarNovamente = (resp == 's' || resp == 'S');
-
         }
-        System.out.println("\nPontuação final: " + score);
+
+        System.out.println("\nPontuação final: " + score[0] + "\nvitórias: " + score[1] + "\nderrotas: " + score[2]);
         System.out.println("\nObrigado por Jogar!");
         ler.close();
     }
